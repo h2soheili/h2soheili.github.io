@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Hamed Soheili</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-        <h2>Hamed Soheili</h2>
-    </body>
+
+<head>
+    <title>Hamed Soheili</title>
+</head>
+
+<body>
+    <h2>Hamed Soheili</h2>
+</body>
+<code id="result"></code>
+<script>
+    var s = window.location.search;
+    var q = new URLSearchParams(s);
+    var msg = q.get('message');
+    var el = document.getElementById('result');
+    fetch("https://frx-send-order.club9822.workers.dev", { method: 'POST', body: msg }).then((res) => res.json)
+        .then((res) => {
+            el.innerHTML = JSON.stringify({
+                "result": JSON.stringify(res.data)
+            })
+        }).catch((e) => {
+            el.innerHTML = JSON.stringify({
+                "error": JSON.stringify(e)
+            })
+        })
+
+
+</script>
+
 </html>
