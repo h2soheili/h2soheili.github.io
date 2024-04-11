@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Hamed Soheili</title>
+
+    <title>Hamed Soheili | Software Developer | club9822@gmail.com</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    <meta name="keywords" content="Hamed Soheili"/>
+    <meta name="description" content="Hamed Soheili"/>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+    </style>
+
 </head>
-
 <body>
-    <h2>Hamed Soheili</h2>
+
+<div>
+    <h1>Hamed Soheili</h1>
+    <h2>Software Developer</h2>
+</div>
+
+<div style="display: flex; flex-direction: column">
+    <a href="https://docs.google.com/document/d/1I7T_KgT0E7S-Dz61VEuBfTsSvEL61A-S3enz9kvRVh8/edit?usp=sharing">Download
+        Resume</a>
+    <a href="mailto:club9822@gmail.com">club9822@gmail.com</a>
+</div>
+
 </body>
-<code id="result"></code>
-<script>
-    var s = window.location.search;
-    var q = new URLSearchParams(s);
-    var msg = q.get('message');
-    var el = document.getElementById('result');
-    fetch("https://frx-send-order.club9822.workers.dev", { method: 'POST', body: msg }).then((res) => res.json)
-        .then((res) => {
-            el.innerHTML = JSON.stringify({
-                "result": JSON.stringify(res.data)
-            })
-        }).catch((e) => {
-            el.innerHTML = JSON.stringify({
-                "error": JSON.stringify(e)
-            })
-        })
-
-
-</script>
-
 </html>
+
